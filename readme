@@ -1,0 +1,75 @@
+❯ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/zhan_shi/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/zhan_shi/.ssh/id_rsa
+Your public key has been saved in /Users/zhan_shi/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:d6EDmbX8dP1C02HHneciU1/YYeEo9ro5QsPxW8cJ9d4 zhan_shi@Zhans-MBP-2.modem
+The key's randomart image is:
++---[RSA 3072]----+
+|          .    X*|
+|         = .  B=O|
+|        + oooo=+*|
+|         o.+==..=|
+|        S * o++o+|
+|         = +.. =E|
+|        . ..o .  |
+|         . oo    |
+|          .o.    |
++----[SHA256]-----+
+❯ ls ~/.ssh/id_rsa.pub
+/Users/zhan_shi/.ssh/id_rsa.pub
+
+❯ pbcopy < ~/.ssh/id_rsa.pub
+
+❯ git clone git@github.com:zhanshiaus/git-excercise.git
+Cloning into 'git-excercise'...
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 18 (delta 3), reused 18 (delta 3), pack-reused 0
+Receiving objects: 100% (18/18), done.
+Resolving deltas: 100% (3/3), done.
+
+
+❯ ls
+git-excercise
+❯ cd git-excercise
+❯ ls
+chapter1.txt chapter2.txt chapter3.txt chapter4.txt
+❯ git branch zhans
+❯ git branch
+❯ git checkout zhans
+Switched to branch 'zhans'
+
+❯ touch test.txt
+❯ open test.txt
+
+❯ git add .
+❯ git commit -m "test write access for shiz1"
+[zhans 38df413] test write access for shiz1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+❯ git log
+
+
+❯ git remote -v
+origin	git@github.com:zhanshiaus/git-excercise.git (fetch)
+origin	git@github.com:zhanshiaus/git-excercise.git (push)
+❯ git push origin zhans -u
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'zhans' on GitHub by visiting:
+remote:      https://github.com/zhanshiaus/git-excercise/pull/new/zhans
+remote:
+To github.com:zhanshiaus/git-excercise.git
+ * [new branch]      zhans -> zhans
+branch 'zhans' set up to track 'origin/zhans'.
